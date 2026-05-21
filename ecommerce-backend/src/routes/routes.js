@@ -15,6 +15,7 @@ const getProductById = require("../controllers/product_id")
 const search = require("../controllers/search")
 const createUser = require("../controllers/create_user")
 const getUsers = require("../controllers/users")
+const updateUser = require("../controllers/upaderuserbyid")
 
 
 //======================routes ========================//
@@ -25,7 +26,7 @@ routes.get('/users', loggerMiddleware, getUsers)
 routes.get('/about', about)
 routes.get('/products/:id', getProductById)
 routes.get('/search', search)
-routes.put('/update_user/:id', loggerMiddleware, apikeyMiddleware, updateUser)
+routes.put('/updateuser/:id', loggerMiddleware, apikeyMiddleware, updateUser)
 
 
 module.exports = routes;
