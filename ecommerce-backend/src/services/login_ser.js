@@ -19,7 +19,7 @@ const login = async (email, password) => {
             }
         }
         else {
-            const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' })
+            const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '0.5m' })
             return {
                 status: 200,
                 message: "you are logged in successfully",
